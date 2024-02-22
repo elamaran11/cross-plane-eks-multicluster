@@ -1,0 +1,11 @@
+apiVersion: kubernetes.crossplane.io/v1alpha1
+kind: ProviderConfig
+metadata:
+  name: kubernetes-provider-eks
+spec:
+  credentials:
+    source: Secret
+    secretRef:
+      namespace: upbound-system
+      name: eks-arm-us-east-2-1-28-eks-connection
+      key: kubeconfig
