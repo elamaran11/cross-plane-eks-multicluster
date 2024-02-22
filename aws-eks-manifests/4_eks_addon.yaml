@@ -3,7 +3,7 @@ kind: Addon
 metadata:
   annotations:
     meta.upbound.io/example-id: eks/v1beta1/addon
-  name: vpc-cni-3
+  name: vpc-cni-deploy
 spec:
   forProvider:
     addonName: vpc-cni
