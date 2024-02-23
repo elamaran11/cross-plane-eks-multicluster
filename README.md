@@ -11,7 +11,7 @@ Following are the details steps :
 
 
 1. Install [UXP](https://github.com/upbound/universal-crossplane) on your management cluster.
-2. First create an IRSA role either manually or using `eksctl`. Check [this](https://docs.upbound.io/providers/provider-aws/authentication/#create-an-iam-oidc-provider-1) doc for IRSA OIDC provide creation.
+2. Next, create an IRSA role either manually or using `eksctl`. Check [this](https://docs.upbound.io/providers/provider-aws/authentication/#create-an-iam-oidc-provider-1) doc for IRSA OIDC provide creation.
 3. Run the `1_controller_config.yaml` and `2_provider_eks.yaml` in the `aws-provider-manifests` folder to setup the Cross Plane AWS provider.
 4. Run the `3_eks_access_child_cluster.yaml` which will download the `kubeconfig` of the target cluster to a K8s secret in `upbound-system` namespace.
 5. Run the `4_eks_addon.yaml` to create an EKS Addon-on on target cluster using CrossPlane. This approach is the only approach incase of ARM64 nodes because UXP is not supported in ARM64 nodes.
