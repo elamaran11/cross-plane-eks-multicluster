@@ -12,6 +12,6 @@ spec:
     name: conformitron-eksa
   kubeConfig:
     secretRef:
-      namespace: upbound-system
+      # namespace: upbound-system
       name: eks-arm-us-east-2-1-28-eks-connection
       key: kubeconfig
